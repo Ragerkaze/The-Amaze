@@ -6,7 +6,7 @@ import pandas as pd
 df = pd.read_excel("indigenous_translation_phrases_cleaned.xlsx", engine="openpyxl")
 
 # Page setup
-st.set_page_config(page_title="PharmaLingua", layout="wide")
+st.set_page_config(page_title="Talkwithamaze", layout="wide")
 st.markdown(
     '''
     <style>
@@ -33,12 +33,12 @@ st.markdown(
     ''', unsafe_allow_html=True
 )
 
-st.title("🌿 PharmaLingua Chatbot")
+st.title("🌿 Talkwithamaze")
 st.caption("Empowering healthcare through language. Built for the Hackathon: *Nigerian Pharmacists in the AI Lab*")
 
 tab = st.sidebar.radio("Navigate", [
     "📚 Translate Phrases",
-    "💬 Chat with PharmaLingua",
+    "💬 Chat with Amaze",
     "🌍 Join Our Mission",
     "🚀 Exciting Features"
 ])
@@ -76,7 +76,7 @@ if tab == "📚 Translate Phrases":
         else:
             st.warning("Please select a phrase.")
 
-elif tab == "💬 Chat with PharmaLingua":
+elif tab == "💬 Chat with Amaze":
     st.subheader("💬 Simulated Pharmacy Chat")
     st.markdown("This chat uses rule-based logic to simulate basic consultation.")
 
@@ -88,7 +88,7 @@ elif tab == "💬 Chat with PharmaLingua":
 
     col3, col4 = st.columns(2)
     with col3:
-        st.button("🎤 Talk to AI (Coming Soon)", disabled=True)
+        st.button("🎤 Talk to Amaze (Coming Soon)", disabled=True)
     with col4:
         st.button("🔊 Read Aloud (Coming Soon)", disabled=True)
 
@@ -128,13 +128,13 @@ elif tab == "🌍 Join Our Mission":
         if st.form_submit_button("Submit"):
             st.success("Thank you for joining our mission!")
 
-    st.subheader("⭐ Rate PharmaLingua")
+    st.subheader("⭐ Rate Talkwithamaze")
     rating = st.slider("How would you rate this app?", 1, 5, 3)
     if st.button("Submit Rating"):
         st.success(f"Thanks for your rating: {rating}/5")
 
 elif tab == "🚀 Exciting Features":
-    st.subheader("🚀 Coming Soon to PharmaLingua")
+    st.subheader("🚀 Coming Soon to Talkwithamaze")
     st.markdown("Here's what we're working on for the next version:")
     st.markdown("✅ **📜 Chat History** — Save and revisit previous chats")
     st.markdown("✅ **🎤 Voice Input** — Talk directly to the chatbot using your mic")
